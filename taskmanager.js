@@ -85,3 +85,8 @@ const createTaskHtml = (name,description,assignedTo,dueDate,status,id) => {
                 this._currentId = +localStorage.getItem('currentID')
             }
         }
+        deleteTask (taskId) {
+            this.tasks.splice(taskId,1)
+            this._currentId--
+        }
+    }
