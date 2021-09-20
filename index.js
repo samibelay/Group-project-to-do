@@ -12,22 +12,22 @@ const validFormFieldInput = () => {
     const dueDate = newDueDateInput.value;
     if (name===""){
         $('#name-alert').show()
-        setTimeout(()=>{$('#name-alert').hide()},2000)
+        setTimeout(()=>{$('#name-alert').hide()},1000)
         return false;
     }
     if (description==="") {
         $('#describe-alert').show()
-        setTimeout(()=>{$('#describe-alert').hide()},2000)
+        setTimeout(()=>{$('#describe-alert').hide()},1000)
         return false;
     }
     if (assignedTo===""){
         $('#assigned-alert').show()
-        setTimeout(()=>{$('#assigned-alert').hide()},2000)
+        setTimeout(()=>{$('#assigned-alert').hide()},1000)
         return false;
     }
     if (dueDate === ""){
         $('#due-alert').show()
-        setTimeout(()=>{$('#due-alert').hide()},2000)
+        setTimeout(()=>{$('#due-alert').hide()},1000)
         return false;
     }
     
