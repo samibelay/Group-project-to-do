@@ -38,4 +38,26 @@ const validFormFieldInput = () => {
     newDescriptionInput.value = ""
     newAssignedToInput.value = ""
     newDueDateInput.value = ""
-})
+}
+
+const tasksList = document.querySelector('#tasks');
+    tasksList.addEventListener('click',(event) => {
+            const parentTask = event.target.parentElement.parentElement.parentElement
+            const taskId = parentTask.dataset.taskId
+            const task = taskManager.getTaskById(taskId)
+        if (event.target.classList.contains('done-button')){
+            task.status = "DONE"
+            taskManager.save()
+            taskManager.render()
+            return false;
+        }
+        if (event.target.classList.contains('delete-button')){
+            taskManager.deleteTask(taskId)
+            taskManager.save()
+            taskManager.render()
+            return false;
+        }
+    })
+    
+
+
